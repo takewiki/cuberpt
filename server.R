@@ -39,8 +39,7 @@ source(file='lib/EC2Map.R',encoding = 'utf-8');
 #2.01 模板示例数据-----
 
 #data_template
-data_template <-ChinaGDP;
-names(data_template) <-c("年份","省份","收入")
+data_template <-readxl::read_excel('test/test_bar7.xlsx');
 
 #2.02 加载图形选项数据集----
 rdsetting <- rdSettingRead(file = 'rdsetting.xlsx',sheet = 1)
